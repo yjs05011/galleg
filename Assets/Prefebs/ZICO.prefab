@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5085747597629270713
+--- !u!1 &470310272582484842
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5611455251443707907}
-  - component: {fileID: 8822621245288906662}
-  - component: {fileID: 6743234507409886060}
-  - component: {fileID: 2149106980295894453}
-  - component: {fileID: 3688874993862444630}
-  - component: {fileID: 3016205243987165761}
+  - component: {fileID: 994504006209329616}
+  - component: {fileID: 2127419499128857279}
+  - component: {fileID: 1104074515286739656}
+  - component: {fileID: 9172294576349990885}
+  - component: {fileID: -1913380367944789535}
+  - component: {fileID: 1866512018651041309}
   m_Layer: 0
-  m_Name: ZICO
-  m_TagString: enemy
+  m_Name: Zico
+  m_TagString: Zico
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5611455251443707907
+--- !u!4 &994504006209329616
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5085747597629270713}
+  m_GameObject: {fileID: 470310272582484842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 300, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8822621245288906662
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5085747597629270713}
-  m_Mesh: {fileID: -5570197797731065986, guid: 5322c5652e91874478d1dfe14b15036f, type: 3}
---- !u!23 &6743234507409886060
+--- !u!23 &2127419499128857279
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5085747597629270713}
+  m_GameObject: {fileID: 470310272582484842}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,13 +78,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &2149106980295894453
+--- !u!64 &1104074515286739656
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470310272582484842}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4576262921170956795, guid: cb525f6b08595e34d80affe26836c178, type: 3}
+--- !u!54 &9172294576349990885
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5085747597629270713}
+  m_GameObject: {fileID: 470310272582484842}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -100,45 +106,28 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &3688874993862444630
+--- !u!114 &-1913380367944789535
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5085747597629270713}
+  m_GameObject: {fileID: 470310272582484842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c3ae18a430734546b1b341178a25369, type: 3}
+  m_Script: {fileID: 11500000, guid: 685457cb9e8b23a48a98c9e939e411b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy_hp: 0
   enemy_score: 0
   enemy_name: 
-  spawnRaterMin: 0.5
-  spawnRaterMax: 3
-  targerTransf: {fileID: 0}
-  Monster_Rigidbody: {fileID: 0}
-  monster_speed: 2
-  deltaSpeed: 0
-  CoroutineCheck: 0
-  enemy: []
-  bullets: []
-  player: {fileID: 0}
-  time1: 0
---- !u!64 &3016205243987165761
-MeshCollider:
+--- !u!33 &1866512018651041309
+MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5085747597629270713}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5570197797731065986, guid: 5322c5652e91874478d1dfe14b15036f, type: 3}
+  m_GameObject: {fileID: 470310272582484842}
+  m_Mesh: {fileID: -4576262921170956795, guid: cb525f6b08595e34d80affe26836c178, type: 3}

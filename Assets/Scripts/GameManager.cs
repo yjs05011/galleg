@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int enemyBulletCount = 0 ;
+    public int enemyBulletCount = 0;
+    public float gameTime = 0; 
     public static GameManager instance = null;
     // Start is called before the first frame update
+    void Awake(){
+         if(null == instance){
+            instance = this; 
+        }else{
+            Destroy(this.gameObject);
+        }
+    }
     void Start()
     {
         
@@ -17,17 +25,12 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    void Awake(){
-        if(null == instance){
-            instance = this; 
-        }else{
-            Destroy(this.gameObject);
-        }
-    }
     public static GameManager Instance{
-        get {
-            if (null == instance){
+        get{
+            if(null == instance )
+            {
                 return null;
+
             }
             return instance;
         }
